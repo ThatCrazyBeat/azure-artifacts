@@ -22,8 +22,7 @@ Enable-PSRemoting -Force -SkipNetworkProfileCheck
 Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force 
 
 # Work around a bug in the Squirrel installer
-Invoke-Command -Credential $credential -ComputerName $env:COMPUTERNAME -ScriptBlock 
-{
+Invoke-Command -Credential $credential -ComputerName $env:COMPUTERNAME -ScriptBlock {
     Set-ExecutionPolicy -ExecutionPolicy Bypass -Scope Process -Force;
     New-Item -Path "HKCU:\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify"  -Type directory -Force -ErrorAction Continue
 }
