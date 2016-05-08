@@ -21,6 +21,6 @@
         }
     },
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File startChocolatey.ps1 -PackageList officproplus2013 -Username ',  parameters('installUsername'), ' -Password ', parameters('installPassword'))]"
+        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File startChocolatey.ps1 -PackageList officeproplus2013 -Username ',  parameters('installUsername'), ' -Password ', parameters('installPassword'))]"
     }
 }
