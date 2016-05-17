@@ -1,26 +1,15 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
     "title": "OfficeProPlus2013",
-    "description": "Installs Microsoft Office Professional Plus 2013 using the Chocolatey package manager",
+    "description": "Installs Microsoft Office Professional Plus 2013 using Office Click to Run installer",
     "tags": [
         "Windows",
         "OfficeProPlus2013"
     ],
-    "iconUri": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Atom_editor_logo.svg/1118px-Atom_editor_logo.svg.png",
+    "iconUri": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Microsoft_Office_2013_logo.svg",
     "targetOsType": "Windows",
-    "parameters": {
-        "installUsername": {
-            "type": "string",
-            "displayName": "Install User Name",
-            "description": "User with admin rights to install OfficeProPlus2013"
-        },
-        "installPassword": {
-            "type": "securestring",
-            "displayName": "Install Password",
-            "description": "Password for the install user"
-        }
-    },
+
     "runCommand": {
-        "commandToExecute": "[concat('powershell.exe -ExecutionPolicy bypass -File startChocolatey.ps1 -PackageList officeproplus2013 -Username ',  parameters('installUsername'), ' -Password ', parameters('installPassword'))]"
+        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File startChocolatey.ps1"
     }
 }
