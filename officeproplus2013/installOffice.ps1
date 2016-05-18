@@ -1,8 +1,8 @@
-$command = $PSScriptRoot + "\setup.exe"
+IF ($PSVersionTable.PSVersion.Major -gt 2) {$root = $PSScriptRoot}
+ELSE {$root = split-path -parent $MyInvocation.MyCommand.Definition}
 
-
-$config = $PSScriptRoot + "\configuration.xml"
-
+$command = $root + "\setup.exe"
+$config = $root + "\configuration.xml"
 
 & $command  /download $config
 & $command  /configure $config
