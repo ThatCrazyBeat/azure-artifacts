@@ -1,6 +1,6 @@
 {
     "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
-    "title": ".NET Framework 3.5 - Windows Server 2012 R2",
+    "title": ".NET Framework 3.5",
     "description": "Enable Microsoft .NET Framework 3.5 using PowerShell Cmdlet",
     "tags": [
         "Windows",
